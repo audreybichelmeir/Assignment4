@@ -11,18 +11,18 @@ fileReader::~fileReader()
 void fileReader::filePrompt(string error)
 {
   string fileChecker = " ";
-bool isGood = false;
+  bool isGood = false;
 
-while(!isGood)
-{
-  cout << "Enter file name:" << endl;
-  cin >> fileChecker;
-  if(fileChecker.length() > 0){
-    isGood = true;
+  while(!isGood)
+  {
+    cout << "Enter file name:" << endl;
+    cin >> fileChecker;
+    if(fileChecker.length() > 0){
+      isGood = true;
+    }
   }
-}
-readAFile(fileChecker);
-// return error;
+  readAFile(fileChecker);
+  // return error;
 
 }
 
@@ -31,6 +31,12 @@ void fileReader::readAFile(string file)
   fileReader fr;
   string line = " ";
   fstream inputStream;
+  string strWindow = " ";
+  int windows = 0;
+  int atTimeOfArrival = 0;
+  int students = 0;
+  int timeNeeded = 0;
+  bool continueReadingFile = true; // continues reading the file so it does not stop at the first line
 
   inputStream.open(file);
 
@@ -40,12 +46,26 @@ void fileReader::readAFile(string file)
     exit(1);
   }
 
-  while(getline(inputStream, line))
+  if (inputStream) // ok this if statement gets the window number
   {
-    cout << line << endl;
+    getline(inputStream, strWindow);
+    windows = stoi(strWindow);
+
   }
-  inputStream.close();
+  cout << "window: " << windows << endl;
 
-  //return file;
+  while(continueReadingFile){
+    //cotinues to read in the current line
+    getline(inputStream, line);
+    atTimeOfArrival = stoi(line);
+    //store int conversion
+    getline(inputStream, line))
+    students = stoi(line);
+    for(int i = 0; i < students; ++i) {
+    }
+    getline(inputStream, line))
+    timeNeeded = stoi(line);
 
+    inputStream.close();
+  }
 }
