@@ -5,12 +5,23 @@
 
 using namespace std;
 
-class fileReader
+class Student
 {
 public:
   Student();
   ~Student();
-  void getTime(); // empty
-  void setTime(int time);
 
+  int getAtTimeOfArrival(); // empty
+  void setAtTimeOfArrival(int timeArrival);
+
+  int getStudent();
+  void setStudent(int student);
+
+  int getNeededTime();
+  void setNeededTime(int timeNeeded);
+
+private:
+  unsigned int timeArr;
+  unsigned int stu;
+  unsigned int timeNeed;
 };

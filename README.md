@@ -11,6 +11,14 @@ main.cpp
 fileReader.cpp
 fileReader.h
 ListNode.h
+GenQueue.h
+GenDoublyLinkedList.h
+Window.h
+Window.cpp
+Student.h
+Student.cpp
+RegistrarOffice.h
+RegistrarOffice.cpp
 
 running the program
 make all
